@@ -5,12 +5,15 @@
 
 # 说明
 该工具只适用一般业务查询接口，对接口查询速度有要求的建议还是自己手写</br>
-该工具暴漏的是数据库字段，对此敏感的不建议使用，或者自己在上层加一个查询字段转数据库字段的方法</br>
+该工具暴漏的是*数据库字段*，对此敏感的不建议使用，或者自己在上层加一个查询字段转数据库字段的方法</br>
 该工具默认暴漏的是Entity中所有被TableField和TableId注解标识的字段</br>
-该工具的like查询试用的%%，有前缀匹配要求的可按需修改工具类中的like查询逻辑
+该工具的*like查询试用的%%*，有前缀匹配要求的可按需修改工具类中的like查询逻辑
 
 # 使用
-后端将前端传参序列化成Filter类，之后调用Filter2Wrapper工具类的filter2Wrapper方法，将Filter转成mybatis-plus的Wrapper类
+后端将前端传参序列化成Filter类，之后调用Filter2Wrapper工具类的filter2Wrapper方法，将Filter转成mybatis-plus的Wrapper类</br>
+
+# 集成
+直接将filter及model下的类拷贝到自己服务代码或公共包下
 
 # 用法
 example文件夹下的Test类里面有示例
